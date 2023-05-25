@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'signing_screen.dart';
+
 class GetStarted extends StatelessWidget {
   static const routeName = '/get-started';
   const GetStarted({super.key});
@@ -30,15 +32,16 @@ class GetStarted extends StatelessWidget {
             ),
             Column(
               children: [
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width * 0.9,
                   height: MediaQuery.of(context).size.height * 0.08,
                   child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text('Sign In'),
+                    onPressed: () =>
+                        Navigator.pushNamed(context, SigningScreen.routeName),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromRGBO(97, 105, 210, 1),
+                      backgroundColor: Theme.of(context).primaryColor,
                     ),
+                    child: const Text('Sign In'),
                   ),
                 ),
                 const SizedBox(

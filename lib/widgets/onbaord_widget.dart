@@ -98,8 +98,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                         onPressed: () => Navigator.pushReplacementNamed(
                             context, GetStarted.routeName),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor:
-                              const Color.fromRGBO(97, 105, 210, 1),
+                          backgroundColor: Theme.of(context).primaryColor,
                         ),
                         child: const Text('NEXT'),
                       )
@@ -111,8 +110,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                           );
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor:
-                              const Color.fromRGBO(97, 105, 210, 1),
+                          backgroundColor: Theme.of(context).primaryColor,
                         ),
                         child: const Text('NEXT'),
                       ),
