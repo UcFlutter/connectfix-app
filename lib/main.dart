@@ -1,17 +1,26 @@
 import 'dart:async';
 
-import 'package:connect_fix_app/screens/create_new_password_screen.dart';
+import 'package:connect_fix_app/screens/signup_section/as_service_provider/create_account_as_service_provider.dart';
+import 'package:connect_fix_app/screens/signup_section/as_service_provider/create_service_account_section_two.dart';
+import 'package:connect_fix_app/screens/signup_section/as_user/create_account_as_user_section_3.dart';
+import 'package:connect_fix_app/screens/forgot_password_section/create_new_password_screen.dart';
 import 'package:connect_fix_app/screens/get_started_screen.dart';
 import 'package:connect_fix_app/screens/onboarding_screen.dart';
-import 'package:connect_fix_app/screens/otp_screen.dart';
+import 'package:connect_fix_app/screens/forgot_password_section/otp_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'screens/forgot_password_screen.dart';
-import 'screens/login_as_service_provider.dart';
-import 'screens/login_as_user_screen.dart';
-import 'screens/signing_screen.dart';
+import 'screens/signup_section/as_service_provider/create_account_as_service_provider_3.dart';
+import 'screens/signup_section/as_user/create_account_as_user.dart';
+import 'screens/signup_section/as_user/create_account_as_user_section_2.dart';
+import 'screens/signup_section/as_user/verification_screen.dart';
+import 'screens/signup_section/sign_up_section.dart';
+import 'screens/forgot_password_section/forgot_password_screen.dart';
+import 'signing_section/as_service_provider/login_as_service_provider.dart';
+import 'signing_section/as_user/login_as_user_screen.dart';
+import 'signing_section/signing_screen.dart';
 import 'screens/splash_screen.dart';
-import 'screens/success_screen.dart';
+import 'screens/forgot_password_section/success_screen.dart';
+import 'screens/terms_condition_screen.dart';
 import 'screens/user_dashboard.dart';
 
 void main() {
@@ -62,6 +71,21 @@ class MyApp extends StatelessWidget {
         OTPScreen.routeName: (context) => const OTPScreen(),
         CreateNewPassword.routeName: (context) => const CreateNewPassword(),
         SuccessScreen.routeName: (context) => const SuccessScreen(),
+        SignUpScreen.routeName: (context) => const SignUpScreen(),
+        CreateUserAccount.routeName: (context) => const CreateUserAccount(),
+        CreateUserAccountSectionTwo.routeName: (context) =>
+            const CreateUserAccountSectionTwo(),
+        CreateAccountSectionThree.routeName: (context) =>
+            const CreateAccountSectionThree(),
+        TermsAndConditionScreen.routeName: (context) =>
+            const TermsAndConditionScreen(),
+        VerificationScreen.routeName: (context) => const VerificationScreen(),
+        CreateServiceProviderAccount.routeName: (context) =>
+            const CreateServiceProviderAccount(),
+        CreateServiceAccountSectionTwo.routeName: (context) =>
+            const CreateServiceAccountSectionTwo(),
+        CreateAccountAsServiceProviderThree.routeName: (context) =>
+            const CreateAccountAsServiceProviderThree(),
       },
     );
   }

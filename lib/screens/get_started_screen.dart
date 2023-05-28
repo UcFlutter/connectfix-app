@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'signing_screen.dart';
+import 'signup_section/sign_up_section.dart';
+import '../signing_section/signing_screen.dart';
 
 class GetStarted extends StatelessWidget {
   static const routeName = '/get-started';
@@ -54,7 +55,8 @@ class GetStarted extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.9,
                   height: MediaQuery.of(context).size.height * 0.08,
                   child: OutlinedButton(
-                    onPressed: () {},
+                    onPressed: () =>
+                        Navigator.pushNamed(context, SignUpScreen.routeName),
                     child: const Text(
                       'Create Account',
                       style: TextStyle(
