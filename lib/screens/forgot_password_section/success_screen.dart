@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import '../../signing_section/signing_screen.dart';
+import '../signing_section/signing_screen.dart';
 
 class SuccessScreen extends StatefulWidget {
   static const routeName = '/success-screen';

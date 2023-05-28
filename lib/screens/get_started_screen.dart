@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'signup_section/sign_up_section.dart';
-import '../signing_section/signing_screen.dart';
+import 'signing_section/signing_screen.dart';
 
 class GetStarted extends StatelessWidget {
   static const routeName = '/get-started';

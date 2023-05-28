@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../screens/forgot_password_section/forgot_password_screen.dart';
-import '../../screens/user_dashboard.dart';
+import '../../forgot_password_section/forgot_password_screen.dart';
+import '../../user_dashboard.dart';
 
 class LoginUserScreen extends StatelessWidget {
   static const routeName = '/login-as-user-screen';

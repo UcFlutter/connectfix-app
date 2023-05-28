@@ -1,7 +1,7 @@
 import 'package:connect_fix_app/screens/forgot_password_section/forgot_password_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../screens/user_dashboard.dart';
+import '../../user_dashboard.dart';
 
 class LoginServiceScreen extends StatelessWidget {
   static const routeName = '/login-as-service-provider-screen';
