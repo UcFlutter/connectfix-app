@@ -17,12 +17,12 @@ class CreateNewPassword extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'Create New Password',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
             ),
-            Text('Please enter your new password'),
-            SizedBox(
+            const Text('Please enter your new password'),
+            const SizedBox(
               height: 20,
             ),
             Form(
@@ -32,10 +32,10 @@ class CreateNewPassword extends StatelessWidget {
                     padding: const EdgeInsets.all(10.0),
                     child: TextFormField(
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        label: Text('New Password'),
+                        border: const OutlineInputBorder(),
+                        label: const Text('New Password'),
                         suffixIcon: IconButton(
-                          icon: Icon(Icons.remove_red_eye_outlined),
+                          icon: const Icon(Icons.remove_red_eye_outlined),
                           onPressed: () {},
                         ),
                       ),
@@ -45,10 +45,10 @@ class CreateNewPassword extends StatelessWidget {
                     padding: const EdgeInsets.all(10.0),
                     child: TextFormField(
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        label: Text('Confirm New Password'),
+                        border: const OutlineInputBorder(),
+                        label: const Text('Confirm New Password'),
                         suffixIcon: IconButton(
-                          icon: Icon(Icons.remove_red_eye_outlined),
+                          icon: const Icon(Icons.remove_red_eye_outlined),
                           onPressed: () {},
                         ),
                       ),
@@ -57,7 +57,7 @@ class CreateNewPassword extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
@@ -68,7 +68,7 @@ class CreateNewPassword extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () =>
                     Navigator.pushNamed(context, SuccessScreen.routeName),
-                child: Text('Confirm'),
+                child: const Text('Confirm'),
               ),
             ),
           ],

@@ -1,3 +1,5 @@
+// This is the splash screen for the application
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -12,6 +14,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  // After 3 seconds, the screen should navigate to the onboarding screen
   @override
   void initState() {
     Timer(const Duration(seconds: 3), () {
@@ -37,6 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
+              // TODO: The circle avatar should be the connectFix Logo.
               CircleAvatar(
                 radius: 50,
                 backgroundColor: Colors.white,

@@ -25,9 +25,9 @@ class OTPScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Container(
+            const SizedBox(
               width: 250,
-              child: const Text(
+              child: Text(
                 'We have sent a code to your phone number, please check and enter the code below.',
                 maxLines: 2,
                 textAlign: TextAlign.center,
@@ -39,21 +39,21 @@ class OTPScreen extends StatelessWidget {
               textFieldAlignment: MainAxisAlignment.spaceAround,
               // fieldStyle: FieldStyle.box,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 left: 32,
                 right: 30,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Didn\'t recieve a code?'),
+                  const Text('Didn\'t receive a code?'),
                   TextButton(
                     onPressed: () {},
-                    child: Text('Resend Code'),
+                    child: const Text('Resend Code'),
                   ),
                 ],
               ),
@@ -69,7 +69,7 @@ class OTPScreen extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () =>
                     Navigator.pushNamed(context, CreateNewPassword.routeName),
-                child: Text('Submit Code'),
+                child: const Text('Submit Code'),
               ),
             ),
           ],

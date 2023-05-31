@@ -74,7 +74,7 @@ class CreateUserAccount extends StatelessWidget {
                         label: Text('LGA'),
                       ),
                       onChanged: (value) {},
-                      items: [],
+                      items: const [],
                     ),
                     const SizedBox(
                       height: 20,
@@ -85,7 +85,7 @@ class CreateUserAccount extends StatelessWidget {
                         label: Text('Town/Area'),
                       ),
                       onChanged: (value) {},
-                      items: [],
+                      items: const [],
                     ),
                     const SizedBox(
                       height: 20,

@@ -1,11 +1,11 @@
 import 'package:connect_fix_app/screens/signup_section/as_user/create_account_as_user_section_3.dart';
 import 'package:flutter/material.dart';
 
-import 'signup_section/as_user/verification_screen.dart';
+import '../verification_screens/user_verification_screen.dart';
 
-class TermsAndConditionScreen extends StatelessWidget {
-  static const routeName = '/terms-and-condition';
-  const TermsAndConditionScreen({super.key});
+class UserTermsAndConditionScreen extends StatelessWidget {
+  static const routeName = '/user-terms-and-condition';
+  const UserTermsAndConditionScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +85,7 @@ class TermsAndConditionScreen extends StatelessWidget {
                       onPressed: () {
                         Navigator.pushReplacementNamed(
                           context,
-                          VerificationScreen.routeName,
+                          UserVerificationScreen.routeName,
                         );
                       },
                       child: const Text('Next'),

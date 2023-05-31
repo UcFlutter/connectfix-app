@@ -27,9 +27,9 @@ class ForgotPasswordScreen extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Container(
+            const SizedBox(
               width: 250,
-              child: const Text(
+              child: Text(
                 'Please enter your email below to receive your password reset instructions',
                 textAlign: TextAlign.center,
                 maxLines: 2,
@@ -60,7 +60,7 @@ class ForgotPasswordScreen extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () =>
                     Navigator.pushNamed(context, OTPScreen.routeName),
-                child: Text('Send code'),
+                child: const Text('Send code'),
               ),
             ),
           ],

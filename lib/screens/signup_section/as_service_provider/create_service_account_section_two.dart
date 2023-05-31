@@ -124,7 +124,7 @@ class CreateServiceAccountSectionTwo extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width * 0.66,
                       height: MediaQuery.of(context).size.height * 0.06,
                       child: ElevatedButton(
@@ -134,7 +134,7 @@ class CreateServiceAccountSectionTwo extends StatelessWidget {
                             CreateAccountAsServiceProviderThree.routeName,
                           );
                         },
-                        child: Text('Next'),
+                        child: const Text('Next'),
                       ),
                     ),
                   ],

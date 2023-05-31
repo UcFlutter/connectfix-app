@@ -1,3 +1,5 @@
+// This screen contains the onboarding screen.
+
 import 'package:flutter/material.dart';
 
 import '../widgets/onbaord_widget.dart';
@@ -10,6 +12,7 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
+  // This are the items to be displayed on the onboarding screen
   final List screenDetails = [
     {
       'icon': Icons.ac_unit,
@@ -47,6 +50,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         controller: _controller,
         itemCount: screenDetails.length,
         itemBuilder: (context, index) {
+          // The OnboardWidget displays how the onboard widget should be displayed
+          // It can be found in the widgets folder.
           return OnboardWidget(
             isLastPage: _isLastPage,
             screenDetails: screenDetails,

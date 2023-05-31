@@ -1,9 +1,11 @@
+// This widget holds content that should be displayed on the onboarding screen.
+
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../screens/get_started_screen.dart';
 
-class OnboardWidget extends StatefulWidget {
+class OnboardWidget extends StatelessWidget {
   const OnboardWidget({
     super.key,
     required PageController controller,
@@ -24,17 +26,12 @@ class OnboardWidget extends StatefulWidget {
   final bool isLastPage;
 
   @override
-  State<OnboardWidget> createState() => _OnboardWidgetState();
-}
-
-class _OnboardWidgetState extends State<OnboardWidget> {
-  @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-            widget.imageUrl,
+            imageUrl,
           ),
           fit: BoxFit.cover,
         ),
@@ -48,7 +45,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
             height: 100,
             padding: const EdgeInsets.only(top: 50),
             child: Icon(
-              widget.icon,
+              icon,
               size: 100,
               color: Colors.white,
             ),
@@ -57,7 +54,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                widget.title,
+                title,
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 28,
@@ -68,7 +65,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                 height: 10,
               ),
               Text(
-                widget.subtitle,
+                subtitle,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 20,
@@ -79,11 +76,10 @@ class _OnboardWidgetState extends State<OnboardWidget> {
               const SizedBox(
                 height: 50,
               ),
+              // This is an imported package can be changed if need be.
               SmoothPageIndicator(
-                controller: widget._controller,
-                count: widget.screenDetails.length,
-
-                // axisDirection: ,
+                controller: _controller,
+                count: screenDetails.length,
                 effect: const ExpandingDotsEffect(),
               ),
               const SizedBox(
@@ -93,27 +89,31 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                 padding: const EdgeInsets.only(bottom: 30),
                 width: MediaQuery.of(context).size.width * 0.9,
                 height: MediaQuery.of(context).size.height * 0.1,
-                child: widget.isLastPage
-                    ? ElevatedButton(
-                        onPressed: () => Navigator.pushReplacementNamed(
-                            context, GetStarted.routeName),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Theme.of(context).primaryColor,
-                        ),
-                        child: const Text('NEXT'),
-                      )
-                    : ElevatedButton(
-                        onPressed: () {
-                          widget._controller.nextPage(
-                            duration: const Duration(milliseconds: 500),
-                            curve: Curves.easeInOut,
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Theme.of(context).primaryColor,
-                        ),
-                        child: const Text('NEXT'),
-                      ),
+                child:
+                    isLastPage //If the page is the last page then it should display the get started screen
+                        // else display the next onboarding screen.
+                        ? ElevatedButton(
+                            onPressed: () => Navigator.pushReplacementNamed(
+                              context,
+                              GetStarted.routeName,
+                            ),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Theme.of(context).primaryColor,
+                            ),
+                            child: const Text('NEXT'),
+                          )
+                        : ElevatedButton(
+                            onPressed: () {
+                              _controller.nextPage(
+                                duration: const Duration(milliseconds: 500),
+                                curve: Curves.easeInOut,
+                              );
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Theme.of(context).primaryColor,
+                            ),
+                            child: const Text('NEXT'),
+                          ),
               ),
             ],
           )

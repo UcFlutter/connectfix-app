@@ -1,4 +1,4 @@
-import 'package:connect_fix_app/screens/terms_condition_screen.dart';
+import 'package:connect_fix_app/screens/T&C/service_provider_terms.dart';
 import 'package:flutter/material.dart';
 
 import 'create_service_account_section_two.dart';
@@ -54,13 +54,11 @@ class CreateAccountAsServiceProviderThree extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    DropdownButtonFormField(
+                    TextFormField(
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         label: Text('Business LGA'),
                       ),
-                      onChanged: (value) {},
-                      items: [],
                     ),
                     const SizedBox(
                       height: 20,
@@ -142,15 +140,17 @@ class CreateAccountAsServiceProviderThree extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           width: MediaQuery.of(context).size.width * 0.66,
                           height: MediaQuery.of(context).size.height * 0.06,
                           child: ElevatedButton(
                             onPressed: () {
                               Navigator.pushReplacementNamed(
-                                  context, TermsAndConditionScreen.routeName);
+                                  context,
+                                  ServiceProviderTermsAndConditionScreen
+                                      .routeName);
                             },
-                            child: Text('Next'),
+                            child: const Text('Next'),
                           ),
                         ),
                       ],

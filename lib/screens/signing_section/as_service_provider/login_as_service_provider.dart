@@ -1,7 +1,7 @@
 import 'package:connect_fix_app/screens/forgot_password_section/forgot_password_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../user_dashboard.dart';
+import '../../dashboards/user_dashboard/user_dashboard.dart';
 
 class LoginServiceScreen extends StatelessWidget {
   static const routeName = '/login-as-service-provider-screen';
@@ -96,16 +96,16 @@ class LoginServiceScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () => Navigator.pushReplacementNamed(
                       context, UserDashBoard.routeName),
-                  child: Text('Sign In'),
+                  child: const Text('Sign In'),
                 ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Don\'t have an acount?'),
+                  const Text('Don\'t have an account?'),
                   TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       'Sign Up',
                       // textAlign: TextAlign.center,
                     ),

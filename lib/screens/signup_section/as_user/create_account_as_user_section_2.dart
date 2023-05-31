@@ -33,9 +33,9 @@ class CreateUserAccountSectionTwo extends StatelessWidget {
                     ),
                   ),
                   onChanged: (value) {},
-                  items: [],
+                  items: const [],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 DropdownButtonFormField(
@@ -46,9 +46,9 @@ class CreateUserAccountSectionTwo extends StatelessWidget {
                     ),
                   ),
                   onChanged: (value) {},
-                  items: [],
+                  items: const [],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
@@ -110,7 +110,7 @@ class CreateUserAccountSectionTwo extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width * 0.66,
                       height: MediaQuery.of(context).size.height * 0.06,
                       child: ElevatedButton(
@@ -118,7 +118,7 @@ class CreateUserAccountSectionTwo extends StatelessWidget {
                           Navigator.pushReplacementNamed(
                               context, CreateAccountSectionThree.routeName);
                         },
-                        child: Text('Next'),
+                        child: const Text('Next'),
                       ),
                     ),
                   ],

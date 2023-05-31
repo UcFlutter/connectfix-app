@@ -1,23 +1,29 @@
 import 'dart:async';
 
+import 'package:connect_fix_app/screens/dashboards/service_provider_dashboard/service_provider_dashnoard.dart';
+import 'package:connect_fix_app/screens/dashboards/user_dashboard/user_dashboard.dart';
 import 'package:flutter/material.dart';
 
-class VerificationScreen extends StatefulWidget {
-  static const routeName = '/verification-screen';
-  const VerificationScreen({super.key});
+class ServiceProviderVerificationScreen extends StatefulWidget {
+  static const routeName = '/service-verification-screen';
+  const ServiceProviderVerificationScreen({super.key});
 
   @override
-  State<VerificationScreen> createState() => _VerificationScreenState();
+  State<ServiceProviderVerificationScreen> createState() =>
+      _ServiceProviderVerificationScreen();
 }
 
-class _VerificationScreenState extends State<VerificationScreen> {
+class _ServiceProviderVerificationScreen
+    extends State<ServiceProviderVerificationScreen> {
   @override
   void initState() {
     Timer(const Duration(seconds: 3), () {
       setState(() {
         isVerified = true;
       });
+      Navigator.pushNamed(context, ServiceProviderDashboard.routeName);
     });
+
     super.initState();
   }
 

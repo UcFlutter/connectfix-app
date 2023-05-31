@@ -1,3 +1,5 @@
+// Holds the signup and signing button.
+
 import 'package:flutter/material.dart';
 
 import 'signup_section/sign_up_section.dart';

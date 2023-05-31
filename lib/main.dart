@@ -1,18 +1,18 @@
-import 'dart:async';
-
-import 'package:connect_fix_app/screens/signup_section/as_service_provider/create_account_as_service_provider.dart';
-import 'package:connect_fix_app/screens/signup_section/as_service_provider/create_service_account_section_two.dart';
-import 'package:connect_fix_app/screens/signup_section/as_user/create_account_as_user_section_3.dart';
-import 'package:connect_fix_app/screens/forgot_password_section/create_new_password_screen.dart';
-import 'package:connect_fix_app/screens/get_started_screen.dart';
-import 'package:connect_fix_app/screens/onboarding_screen.dart';
-import 'package:connect_fix_app/screens/forgot_password_section/otp_screen.dart';
+// This file is the starting point of the application i used a named route for navigation
 import 'package:flutter/material.dart';
 
+import 'screens/T&C/service_provider_terms.dart';
+import 'screens/signup_section/as_service_provider/create_account_as_service_provider.dart';
+import 'screens/signup_section/as_service_provider/create_service_account_section_two.dart';
+import 'screens/signup_section/as_user/create_account_as_user_section_3.dart';
+import 'screens/forgot_password_section/create_new_password_screen.dart';
+import 'screens/get_started_screen.dart';
+import 'screens/forgot_password_section/otp_screen.dart';
+import 'screens/dashboards/service_provider_dashboard/service_provider_dashnoard.dart';
 import 'screens/signup_section/as_service_provider/create_account_as_service_provider_3.dart';
 import 'screens/signup_section/as_user/create_account_as_user.dart';
 import 'screens/signup_section/as_user/create_account_as_user_section_2.dart';
-import 'screens/signup_section/as_user/verification_screen.dart';
+import 'screens/verification_screens/service_provider_verification_screen.dart';
 import 'screens/signup_section/sign_up_section.dart';
 import 'screens/forgot_password_section/forgot_password_screen.dart';
 import 'screens/signing_section/as_service_provider/login_as_service_provider.dart';
@@ -20,8 +20,9 @@ import 'screens/signing_section/as_user/login_as_user_screen.dart';
 import 'screens/signing_section/signing_screen.dart';
 import 'screens/splash_screen.dart';
 import 'screens/forgot_password_section/success_screen.dart';
-import 'screens/terms_condition_screen.dart';
-import 'screens/user_dashboard.dart';
+import 'screens/T&C/user_terms_condition_screen.dart';
+import 'screens/dashboards/user_dashboard/user_dashboard.dart';
+import 'screens/verification_screens/user_verification_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
     for (int i = 1; i < 10; i++) {
       strengths.add(0.1 * i);
     }
-    strengths.forEach((strength) {
+    for (var strength in strengths) {
       final double ds = 0.5 - strength;
       swatch[(strength * 1000).round()] = Color.fromRGBO(
         r + ((ds < 0 ? r : (255 - r)) * ds).round(),
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
         b + ((ds < 0 ? b : (255 - b)) * ds).round(),
         1,
       );
-    });
+    }
     return MaterialColor(color.value, swatch);
   }
 
@@ -64,7 +65,7 @@ class MyApp extends StatelessWidget {
         GetStarted.routeName: (context) => const GetStarted(),
         SigningScreen.routeName: (context) => const SigningScreen(),
         LoginUserScreen.routeName: (context) => const LoginUserScreen(),
-        UserDashBoard.routeName: (context) => const UserDashBoard(),
+        UserDashBoard.routeName: (context) => UserDashBoard(),
         LoginServiceScreen.routeName: (context) => const LoginServiceScreen(),
         ForgotPasswordScreen.routeName: (context) =>
             const ForgotPasswordScreen(),
@@ -77,15 +78,22 @@ class MyApp extends StatelessWidget {
             const CreateUserAccountSectionTwo(),
         CreateAccountSectionThree.routeName: (context) =>
             const CreateAccountSectionThree(),
-        TermsAndConditionScreen.routeName: (context) =>
-            const TermsAndConditionScreen(),
-        VerificationScreen.routeName: (context) => const VerificationScreen(),
+        UserTermsAndConditionScreen.routeName: (context) =>
+            const UserTermsAndConditionScreen(),
+        ServiceProviderTermsAndConditionScreen.routeName: (context) =>
+            const ServiceProviderTermsAndConditionScreen(),
+        UserVerificationScreen.routeName: (context) =>
+            const UserVerificationScreen(),
+        ServiceProviderVerificationScreen.routeName: (context) =>
+            const ServiceProviderVerificationScreen(),
         CreateServiceProviderAccount.routeName: (context) =>
             const CreateServiceProviderAccount(),
         CreateServiceAccountSectionTwo.routeName: (context) =>
             const CreateServiceAccountSectionTwo(),
         CreateAccountAsServiceProviderThree.routeName: (context) =>
             const CreateAccountAsServiceProviderThree(),
+        ServiceProviderDashboard.routeName: (context) =>
+            const ServiceProviderDashboard(),
       },
     );
   }

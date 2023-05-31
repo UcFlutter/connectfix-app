@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'create_account_as_user_section_2.dart';
-import '../../terms_condition_screen.dart';
+import '../../T&C/user_terms_condition_screen.dart';
 
 class CreateAccountSectionThree extends StatelessWidget {
   static const routeName = '/create-user-account-section-3';
@@ -145,17 +145,17 @@ class CreateAccountSectionThree extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width * 0.66,
                       height: MediaQuery.of(context).size.height * 0.06,
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.pushReplacementNamed(
                             context,
-                            TermsAndConditionScreen.routeName,
+                            UserTermsAndConditionScreen.routeName,
                           );
                         },
-                        child: Text('Next'),
+                        child: const Text('Next'),
                       ),
                     ),
                   ],

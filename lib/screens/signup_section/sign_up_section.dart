@@ -2,8 +2,6 @@ import 'package:connect_fix_app/screens/signup_section/as_service_provider/creat
 import 'package:flutter/material.dart';
 
 import 'as_user/create_account_as_user.dart';
-import '../signing_section/as_service_provider/login_as_service_provider.dart';
-import '../signing_section/as_user/login_as_user_screen.dart';
 
 class SignUpScreen extends StatelessWidget {
   static const routeName = '/create-screen';
